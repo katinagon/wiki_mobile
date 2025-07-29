@@ -4,6 +4,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 import java.nio.charset.StandardCharsets;
 
@@ -17,7 +18,7 @@ public class AttachUtils {
     }*/
 
     @Attachment(value = "Screenshot", type = "image/png")
-    public static byte[] screenshotAs(AndroidDriver driver) {
+    public static byte[] screenshotAs(WebDriver driver) {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
@@ -28,7 +29,7 @@ public class AttachUtils {
     }*/
 
     @Attachment(value = "Page Source", type = "text/xml")
-    public static String pageSource(AndroidDriver driver) {
+    public static String pageSource(WebDriver driver) {
         return driver.getPageSource();
     }
 

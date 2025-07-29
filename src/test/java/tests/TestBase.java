@@ -11,6 +11,8 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
@@ -31,13 +33,14 @@ public class TestBase {
 
     @AfterEach
     void addAttachments(){
-        AndroidDriver driver = (AndroidDriver) WebDriverRunner.getWebDriver();
+        //AndroidDriver driver = (AndroidDriver) WebDriverRunner.getWebDriver();
+        WebDriver driver = WebDriverRunner.getWebDriver();
         String sessionId = Selenide.sessionId().toString();
 
         AttachUtils.screenshotAs(driver);
         AttachUtils.pageSource(driver);
         AttachUtils.attachLogs("Test finished on device: " +
-                driver.getCapabilities().getCapability("deviceName"));
+                ((RemoteWebDriver) driver).getCapabilities().getCapability("deviceName"));
         closeWebDriver();
         AttachUtils.addVideo(sessionId);
     }
