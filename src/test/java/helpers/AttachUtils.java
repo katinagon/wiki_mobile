@@ -17,26 +17,10 @@ import java.util.Base64;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class AttachUtils {
-/*
+
     @Attachment(value = "{attachName}", type = "image/png")
     public static byte[] screenshotAs(String attachName) {
         return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
-    }*/
-
-    @Attachment(value = "{attachName}", type = "image/png")
-    public static byte[] screenshotAs(String attachName) {
-        try {
-            String base64 = ((TakesScreenshot) WebDriverRunner.getWebDriver())
-                    .getScreenshotAs(OutputType.BASE64);
-
-            if (base64 != null && !base64.isEmpty()) {
-                return Base64.getDecoder().decode(base64);
-            }
-        } catch (Exception e) {
-            Allure.addAttachment("Screenshot Error", "text/plain",
-                    "Failed to get screenshot: " + e.getMessage());
-        }
-        return new byte[0];
     }
 
     @Attachment(value = "Page source", type = "text/plain")

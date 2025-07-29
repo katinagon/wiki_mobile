@@ -35,7 +35,6 @@ public class TestBase {
     void addAttachments(){
         String sessionId = Selenide.sessionId().toString();
 
-        AttachUtils.screenshotAs("Last screenshot");
         AttachUtils.pageSource();
         closeWebDriver();
         AttachUtils.addVideo(sessionId);
