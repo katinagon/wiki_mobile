@@ -1,5 +1,6 @@
 package helpers;
 
+import com.codeborne.selenide.Selenide;
 import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
@@ -11,10 +12,15 @@ import java.nio.charset.StandardCharsets;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class AttachUtils {
-
+/*
     @Attachment(value = "{attachName}", type = "image/png")
     public static byte[] screenshotAs(String attachName) {
         return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
+    }*/
+
+    @Attachment(value = "{attachName}", type = "image/png")
+    public static byte[] screenshotAs(String attachName) {
+        return Selenide.screenshot(OutputType.BYTES);
     }
 
     @Attachment(value = "Page source", type = "text/plain")
