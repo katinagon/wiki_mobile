@@ -10,7 +10,7 @@ import static io.qameta.allure.Allure.step;
 
 @Owner("goncharova-ek")
 @DisplayName("Тесты на поиск")
-public class SearchTests {
+public class SearchTests extends TestBase {
     MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();
 
