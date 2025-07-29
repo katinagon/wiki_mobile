@@ -2,7 +2,6 @@ package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
 import helpers.MobileConfig;
-import io.appium.java_client.android.AndroidDriver;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
@@ -31,7 +30,7 @@ public class BrowserStackDriver implements WebDriverProvider {
         caps.setCapability("name", config.platformName() + " test");
 
         try {
-            return new AndroidDriver(new URL("https://hub.browserstack.com/wd/hub"), caps);
+            return new RemoteWebDriver(new URL("https://hub.browserstack.com/wd/hub"), caps);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
