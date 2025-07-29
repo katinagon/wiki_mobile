@@ -8,7 +8,7 @@ import java.nio.charset.StandardCharsets;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
-public class Attach {
+public class AttachUtils {
     @Attachment(value = "{attachName}", type = "image/png")
     public static byte[] screenshotAs(String attachName) {
         return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
