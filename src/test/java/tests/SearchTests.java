@@ -2,15 +2,12 @@ package tests;
 
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import pages.SearchPage;
 
 import static io.qameta.allure.Allure.step;
 
-
-@Tag("search")
 @Owner("goncharova-ek")
 @DisplayName("Тесты на поиск")
 public class SearchTests extends TestBase {
@@ -40,8 +37,8 @@ public class SearchTests extends TestBase {
             mainPage.clickSearchWikipediaIcon();
         });
 
-        step("Вводим 'Appium' в поисковую строку", () -> {
-            searchPage.searchPageSetValue("Appium");
+        step("Вводим 'Appius' в поисковую строку", () -> {
+            searchPage.searchPageSetValue("Appius");
         });
 
         step("Открываем первую статью из результатов", () -> {
