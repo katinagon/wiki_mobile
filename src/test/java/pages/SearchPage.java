@@ -17,7 +17,7 @@ public class SearchPage {
     private final SelenideElement backBtn = $(className("android.widget.ImageButton"));
 
     public void searchPageSetValue(String value){
-        inputElement.sendKeys();
+        inputElement.sendKeys(value);
     }
 
     public void clickTheFirstResult(){

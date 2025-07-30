@@ -49,8 +49,6 @@ tasks.withType(Test) {
     useJUnitPlatform()
 
     systemProperty 'platform', System.getProperty("PLATFORM", "android")
-    //systemProperty 'bs_user', System.getenv("BROWSERSTACK_USER")
-    //systemProperty 'bs_key', System.getenv("BROWSERSTACK_KEY")
     systemProperty 'bs_user',
             System.getProperty("bs_user",
                     System.getenv("BROWSERSTACK_USER"))
