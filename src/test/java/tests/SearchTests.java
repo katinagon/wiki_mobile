@@ -2,12 +2,15 @@ package tests;
 
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import pages.SearchPage;
 
 import static io.qameta.allure.Allure.step;
 
+
+@Tag("search")
 @Owner("goncharova-ek")
 @DisplayName("Тесты на поиск")
 public class SearchTests extends TestBase {
@@ -21,7 +24,7 @@ public class SearchTests extends TestBase {
             mainPage.clickSearchWikipediaIcon();
         });
 
-        step("Вводим 'Selenide' в поисковую строку", () -> {
+        step("Вводим 'Appium' в поисковую строку", () -> {
             searchPage.searchPageSetValue("Appium");
         });
 
@@ -37,8 +40,8 @@ public class SearchTests extends TestBase {
             mainPage.clickSearchWikipediaIcon();
         });
 
-        step("Вводим 'Selenide' в поисковую строку", () -> {
-            searchPage.searchPageSetValue("Selenide");
+        step("Вводим 'Appium' в поисковую строку", () -> {
+            searchPage.searchPageSetValue("Appium");
         });
 
         step("Открываем первую статью из результатов", () -> {
@@ -47,6 +50,22 @@ public class SearchTests extends TestBase {
 
         step("Проверяем наличие контента", () -> {
             searchPage.checkArticleContent();
+        });
+    }
+
+    @DisplayName("Возврат на главную страницу со страницы поиска")
+    @Test
+    void successfulSearchTest2() {
+        step("Нажимаем на поисковую строку", () -> {
+            mainPage.clickSearchWikipediaIcon();
+        });
+
+        step("Нажимаем на кнопку назад", () -> {
+            searchPage.clickBackBtn();
+        });
+
+        step("Проверяем наличие поисковой строки на главной странице", () -> {
+            mainPage.checkSearchIsVisible();
         });
     }
 }

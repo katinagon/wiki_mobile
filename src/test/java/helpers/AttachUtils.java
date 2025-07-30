@@ -1,18 +1,10 @@
 package helpers;
 
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.WebDriverRunner;
-import io.appium.java_client.android.AndroidDriver;
-import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 
-import java.io.File;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.util.Base64;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 

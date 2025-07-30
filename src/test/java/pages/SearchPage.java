@@ -14,9 +14,10 @@ public class SearchPage {
     private final ElementsCollection listElement = $$(id("org.wikipedia.alpha:id/page_list_item_title"));
     private final ElementsCollection articleContent = $$(className("android.widget.TextView"));
     private final ElementsCollection searchResults = $$(id("org.wikipedia.alpha:id/page_list_item_title"));
+    private final SelenideElement backBtn = $(className("android.widget.ImageButton"));
 
     public void searchPageSetValue(String value){
-        inputElement.sendKeys(value);
+        inputElement.sendKeys();
     }
 
     public void clickTheFirstResult(){
@@ -29,5 +30,9 @@ public class SearchPage {
 
     public void checkArticleContent(){
         articleContent.shouldHave(sizeGreaterThan(0));
+    }
+
+    public void clickBackBtn(){
+        backBtn.click();
     }
 }
