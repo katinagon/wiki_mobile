@@ -37,8 +37,8 @@ public class SearchTests extends TestBase {
             mainPage.clickSearchWikipediaIcon();
         });
 
-        step("Вводим 'Appius' в поисковую строку", () -> {
-            searchPage.searchPageSetValue("Appius");
+        step("Вводим 'Appium' в поисковую строку", () -> {
+            searchPage.searchPageSetValue("Appium");
         });
 
         step("Открываем первую статью из результатов", () -> {
