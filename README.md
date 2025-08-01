@@ -3,7 +3,7 @@
 <img title="wiki" src="media/screens/wiki.png">
 </p>
 
-«Википедия» — многоязычная общедоступная интернет-энциклопедия со свободным контентом. 
+«Википедия» — многоязычная общедоступная интернет-энциклопедия со свободным контентом.  
 [Сайт Wikipedia](https://www.wikipedia.org/)
 
 ## :pushpin: Содержание:
@@ -25,7 +25,6 @@
 <code><a href="https://gradle.org/"><img width="5%" title="Gradle" src="media/icons/Gradle.svg"></a></code>
 <code><a href="https://junit.org/junit5/"><img width="5%" title="JUnit5" src="media/icons/JUnit5.svg"></a></code>
 <code><a href="https://selenide.org/"><img width="5%" title="Selenide" src="media/icons/Selenide.svg"></a></code>
-<code><a href="https://www.browserstack.com/"><img width="5%" title="Browserstack" src="media/icons/Browserstack.svg"></a></code>
 <code><a href="https://github.com/"><img width="5%" title="GitHub" src="media/icons/GitHub.svg"></a></code>
 <code><a href="https://www.jenkins.io/"><img width="5%" title="Jenkins" src="media/icons/Jenkins.svg"></a></code>
 <code><a href="https://github.com/allure-framework/allure2"><img width="5%" title="Allure Report" src="media/icons/Allure_Report.svg"></a></code>
@@ -61,7 +60,7 @@ clean test -DPLATFORM="${PLATFORM}" -DBROWSERSTACK_USER="${BROWSERSTACK_USER}" -
 <img title="Jenkins Build" src="media/screens/Jenkins.png">
 </p>
 
-## <img src="media/icons/Allure_Report.svg" title="Allure Report" width="4%"/> <a href="https://jenkins.autotests.cloud/job/035-katinagon-hw23p2/23/allure/">Пример Allure-отчета</a>
+## <img src="media/icons/Allure_Report.svg" title="Allure Report" width="4%"/> <a href="https://jenkins.autotests.cloud/job/035-katinagon-hw23p2/24/allure/">Пример Allure-отчета</a>
 ### *Основная страница отчёта*
 
 <p align="center">
